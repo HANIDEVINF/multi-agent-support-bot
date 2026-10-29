@@ -199,20 +199,20 @@ export default function Home() {
     parts.push(`Hi ${customerName.split("·")[0].trim()},`)
     if (route.includes("technical")) {
       parts.push(
-        "Our SRE Diagnostics Agent inspected your gateway telemetry and identified stale edge worker key/certificate cache entries following your recent rotation. We have purged the edge cache across all regions and verified HTTP 200 health."
+        "Demo simulation: the SRE Diagnostics path was selected for this ticket. No telemetry was queried, no cache was purged, and no service health check was performed."
       )
     }
     if (route.includes("billing")) {
       parts.push(
-        "Our Billing Specialist verified your ledger and contract terms. We have prepared the prorated credit/refund adjustment in Stripe and queued the updated PDF invoice for immediate finance sign-off."
+        "Demo simulation: the Billing path was selected for this ticket. No ledger was queried, no refund or credit was issued, and no invoice was generated."
       )
     }
     if (route.includes("retention")) {
       parts.push(
-        "In addition to processing your requested billing adjustment, we can also switch your workspace to a paused or flexible monthly tier so you never get caught by an unexpected annual renewal."
+        "This prototype can display a retention option, but it has not changed a subscription or CRM record."
       )
     }
-    parts.push("All tool traces have been attached to ticket audit #" + runId + ".")
+    parts.push("This is a simulated audit entry for ticket #" + runId + ".")
     return parts.join(" ")
   }, [customerName, route, runId])
 
@@ -244,13 +244,13 @@ export default function Home() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-lg font-black tracking-tight text-white">ResolveAI Multi-Agent Orchestrator</span>
+                <span className="text-lg font-black tracking-tight text-white">ResolveAI Support Workflow Prototype</span>
                 <span className="rounded-full border border-purple-500/30 bg-purple-950/60 px-2.5 py-0.5 font-mono text-[11px] font-semibold text-purple-300">
-                  ReAct Swarm + JSON Tool Contracts
+                  Keyword Routing · Mock Tool Contracts
                 </span>
               </div>
               <p className="text-xs text-slate-400">
-                Dynamic Intent Routing Across Triage, Billing, SRE Diagnostics & Retention Agents
+                Illustrative support flows; no live integrations or model-driven agent execution
               </p>
             </div>
           </div>
@@ -269,6 +269,12 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      <div role="note" className="mx-auto max-w-7xl px-6 pt-5">
+        <div className="rounded-xl border border-amber-500/25 bg-amber-950/20 px-4 py-3 text-sm leading-relaxed text-amber-100">
+          <strong>UI simulation:</strong> ticket data, keyword routing, agent steps, memory, tool payloads and audit IDs are illustrative. No Stripe, Datadog, CRM, database, or external AI service is called; no refund, account change, or infrastructure action occurs.
+        </div>
+      </div>
 
       <section className="relative mx-auto grid max-w-7xl gap-6 px-6 py-8 lg:grid-cols-[400px_1fr]">
         {/* Left Ticket Controls */}
